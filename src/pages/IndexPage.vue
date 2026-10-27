@@ -1,22 +1,21 @@
 <template>
-  <q-page padding class="workspace-page">
+  <q-page padding>
     <div class="row justify-center">
       <div class="col-12 col-md-9 col-lg-7">
-      <BreadcrumbNav class="q-mb-md" />
-      <div class="hero-panel row items-center justify-between q-mb-lg">
+      <BreadcrumbNav class="q-mb-lg" />
+      <div class="row items-center justify-between q-mb-md">
         <div>
-          <div class="text-overline">ПЛАН НА СЕГОДНЯ</div>
-          <h1 class="text-h3 text-weight-bold q-my-xs">Мои задачи</h1>
-          <div class="hero-subtitle">Сосредоточьтесь на главном — остальное подождёт.</div>
+          <h1 class="text-h4 text-weight-medium q-my-none">Задачи</h1>
+          <div class="text-subtitle2 text-grey-7 q-mt-xs">Осталось выполнить: {{ todoStore.activeCount }}</div>
         </div>
-        <div class="progress-orb"><strong>{{ todoStore.activeCount }}</strong><span>осталось</span></div>
+        <q-btn color="primary" flat round icon="refresh" :loading="todoStore.isLoading" aria-label="Обновить задачи" @click="load(true)" />
       </div>
 
-      <q-card flat class="composer-card q-mb-lg">
-        <q-card-section class="q-pa-lg"><TodoForm :loading="todoStore.isLoading" @add="add" /></q-card-section>
+      <q-card flat bordered class="q-mb-lg">
+        <q-card-section><TodoForm :loading="todoStore.isLoading" @add="add" /></q-card-section>
       </q-card>
 
-      <div class="row q-col-gutter-md items-center q-mb-lg filter-bar">
+      <div class="row q-col-gutter-md items-center q-mb-md">
         <div class="col-12 col-sm">
           <q-input :model-value="todoStore.search" outlined dense clearable label="Поиск" debounce="150" @update:model-value="todoStore.setSearch(String($event ?? ''))">
             <template #prepend><q-icon name="search" /></template>
@@ -25,7 +24,6 @@
         <div class="col-12 col-sm-auto">
           <q-btn-toggle :model-value="todoStore.filter" unelevated toggle-color="primary" :options="filterOptions" @update:model-value="todoStore.setFilter($event)" />
         </div>
-        <div class="col-auto"><q-btn color="primary" flat round icon="refresh" :loading="todoStore.isLoading" aria-label="Обновить задачи" @click="load(true)" /></div>
       </div>
 
       <q-linear-progress v-if="todoStore.isLoading" indeterminate color="primary" class="q-mb-sm" />

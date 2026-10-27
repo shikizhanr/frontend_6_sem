@@ -3,12 +3,8 @@
     <div class="row justify-center">
       <div class="col-12 col-md-8 col-lg-6">
       <BreadcrumbNav class="q-mb-lg" />
-      <div class="q-mb-lg">
-        <div class="text-overline text-primary">ПЕРСОНАЛИЗАЦИЯ</div>
-        <h1 class="text-h3 text-weight-bold q-my-xs">Настройки</h1>
-        <div class="text-grey-7">Настройте рабочее пространство под себя.</div>
-      </div>
-      <q-list separator class="settings-card">
+      <h1 class="text-h4 text-weight-medium q-mt-none">Настройки</h1>
+      <q-list bordered separator class="rounded-borders">
         <q-item tag="label">
           <q-item-section><q-item-label>Темная тема</q-item-label><q-item-label caption>Текущая тема: {{ ui.themeLabel }}</q-item-label></q-item-section>
           <q-item-section side><q-toggle v-model="ui.isDark" /></q-item-section>
