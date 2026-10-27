@@ -36,3 +36,5 @@ npm run build
 9. Общая валидация, классификация ошибок и `FormError`.
 10. Unit и component tests, coverage и CI.
 11. Production build, env, SEO и GitHub Actions deploy.
+
+Подробная карта файлов, цепочки выполнения операций и ответы на частые вопросы преподавателя находятся в [DEFENSE.md](./DEFENSE.md).

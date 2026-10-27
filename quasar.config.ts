@@ -2,7 +2,7 @@ import { defineConfig } from '#q-app'
 
 export default defineConfig((ctx) => ({
   boot: ['error-handler'],
-  css: [],
+  css: ['app.scss'],
   extras: ['material-icons'],
   build: {
     target: { browser: ['esnext'], node: 'node22' },
@@ -28,7 +28,7 @@ export default defineConfig((ctx) => ({
   },
   framework: {
     config: {
-      brand: { primary: '#315C8C', secondary: '#607D8B', accent: '#009688' },
+      brand: { primary: '#6657d9', secondary: '#18233f', accent: '#ff7a68', positive: '#20a779' },
       notify: { position: 'top-right', timeout: 2500 }
     },
     plugins: ['Notify', 'Dialog', 'LocalStorage']

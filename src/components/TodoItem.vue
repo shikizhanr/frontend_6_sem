@@ -1,11 +1,11 @@
 <template>
-  <q-item :class="todo.completed ? 'text-grey-6' : ''" tag="li">
+  <q-item :class="['todo-item', { 'todo-item--completed': todo.completed }]" tag="li">
     <q-item-section side>
       <q-checkbox :model-value="todo.completed" :aria-label="`Изменить статус: ${todo.title}`" @update:model-value="emit('toggle', todo.id)" />
     </q-item-section>
     <q-item-section>
       <q-item-label :class="todo.completed ? 'text-strike' : ''">{{ todo.title }}</q-item-label>
-      <q-item-label caption>Создано {{ formattedDate }}</q-item-label>
+      <q-item-label caption class="q-mt-xs"><q-icon name="calendar_today" size="13px" /> Создано {{ formattedDate }}</q-item-label>
     </q-item-section>
     <q-item-section side>
       <q-btn flat round dense color="negative" icon="delete_outline" :aria-label="`Удалить: ${todo.title}`" @click="emit('delete', todo.id)">
