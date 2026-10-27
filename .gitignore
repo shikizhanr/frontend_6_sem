@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.quasar/
+coverage/
+*.local
+.env.local
+.env.*.local
+mock/node_modules/
+mock/.cache/
+Практика*.docx

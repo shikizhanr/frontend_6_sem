@@ -1,0 +1,45 @@
+{
+  "name": "quasar-todo-practices",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Учебное ToDo-приложение по практикам 1-11",
+  "scripts": {
+    "dev": "quasar dev",
+    "build": "quasar build",
+    "typecheck": "vue-tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "mock": "npm --prefix mock start",
+    "dev:all": "concurrently -k -n APP,API -c cyan,magenta \"npm run dev\" \"npm run mock\""
+  },
+  "dependencies": {
+    "@quasar/extras": "latest",
+    "axios": "latest",
+    "pinia": "latest",
+    "quasar": "latest",
+    "vue": "latest",
+    "vue-router": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "latest",
+    "@types/node": "latest",
+    "@vitejs/plugin-vue": "latest",
+    "@vitest/coverage-v8": "latest",
+    "@vue/test-utils": "latest",
+    "axios-mock-adapter": "latest",
+    "concurrently": "latest",
+    "esbuild": "latest",
+    "jsdom": "latest",
+    "sass-embedded": "latest",
+    "typescript": "5.9.3",
+    "vite": "latest",
+    "vitest": "latest",
+    "vue-tsc": "latest"
+  },
+  "engines": {
+    "node": "^22.22.2 || ^24.15.0 || >=26"
+  }
+}

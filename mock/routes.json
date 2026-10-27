@@ -1,0 +1,5 @@
+{
+  "/api/todos*": "/todos$1",
+  "/api/users*": "/users$1",
+  "/api/tags*": "/tags$1"
+}

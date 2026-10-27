@@ -1,0 +1,8 @@
+{
+  "name": "todo-mock-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": { "start": "json-server --watch db.json --routes routes.json --middlewares middlewares/auth.js --port 3001" },
+  "dependencies": { "json-server": "0.17.4" }
+}

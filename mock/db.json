@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Демо пользователь",
+      "email": "demo@example.com",
+      "password": "demo123",
+      "settings": {
+        "theme": "light",
+        "compactMode": false
+      }
+    }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "title": "Изучить компоненты Quasar",
+      "completed": true,
+      "createdAt": "2026-10-20T09:00:00.000Z",
+      "userId": 1,
+      "tagIds": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Настроить Pinia store",
+      "completed": false,
+      "createdAt": "2026-10-21T12:30:00.000Z",
+      "userId": 1,
+      "tagIds": [
+        2
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Написать компонентные тесты",
+      "completed": false,
+      "createdAt": "2026-10-22T15:15:00.000Z",
+      "userId": 1,
+      "tagIds": [
+        1,
+        2
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Учеба",
+      "color": "primary"
+    },
+    {
+      "id": 2,
+      "name": "Разработка",
+      "color": "teal"
+    }
+  ]
+}
